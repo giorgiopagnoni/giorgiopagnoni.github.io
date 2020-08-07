@@ -7,7 +7,7 @@ plugins:
 
 sass:
     load_paths:
-        - **/*/node_modules
+        - node_modules
         - _sass
         - assets/css
     style: compressed
@@ -23,3 +23,6 @@ exclude:
   - netlify.toml
   - bin
   - .gitignore
+
+include:
+  - node_modules
