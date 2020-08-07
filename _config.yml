@@ -21,3 +21,7 @@ exclude:
   - netlify.toml
   - bin
   - .gitignore
+  - main.scss
+  - tailwind.config.js
+  - package.json
+

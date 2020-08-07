@@ -1,20 +1,16 @@
-const jekyllEnv = process.env.JEKYLL_ENV || "development";
+const purgecss = require('@fullhuman/postcss-purgecss')
+const cssnano = require('cssnano')
 
 module.exports = {
   plugins: [
-    require("postcss-import"),
-    require("tailwindcss")("./_includes/tailwind.config.js"),
-    require("autoprefixer"),
-    ...(jekyllEnv != "developmentss"
-      ? [
-          require("@fullhuman/postcss-purgecss")({
-            content: ["!(_site|node_modules)/**/*.+(html|js|md)", "*.html"],
-            whitelistPatternsChildren: [/highlight/],
-            defaultExtractor: (content) =>
-              content.match(/[\w-/:]+(?<!:)/g) || [],
-          }),
-          require("cssnano")({ preset: "default" }),
-        ]
-      : [])
+    require('tailwindcss'),
+    require('autoprefixer'),
+    cssnano({
+      preset: 'default'
+    }),
+    purgecss({
+      content: ['./_layouts/**/*.html', './*.html'],
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    })
   ]
-};
+}
