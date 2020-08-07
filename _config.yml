@@ -24,4 +24,4 @@ exclude:
   - main.scss
   - tailwind.config.js
   - package.json
-
+  - yarn-error.log
