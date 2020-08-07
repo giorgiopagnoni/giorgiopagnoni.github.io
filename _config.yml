@@ -2,8 +2,7 @@ url: "https://www.giorgiopagnoni.it" # the base hostname & protocol for your sit
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Giorgio Pagnoni" # the name of your site, e.g. ACME Corp.
 
-plugins:
-  - jekyll-postcss
+plugins: []
 
 sass:
     load_paths:
