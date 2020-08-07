@@ -13,6 +13,6 @@
     "tailwindcss": "^1.6.2"
   },
   "scripts": {
-    "build:css": "postcss main.scss -o main.css"
+    "build:css": "postcss main.scss -o assets/main.css"
   }
 }
