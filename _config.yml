@@ -1,3 +1,25 @@
 url: "https://www.giorgiopagnoni.it" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Giorgio Pagnoni" # the name of your site, e.g. ACME Corp.
+
+plugins:
+  - jekyll-postcss
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+    style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - yarn.lock
+  - package-lock.json
+  - README.md
+  - postcss.config.js
+  - purgecss.config.js
+  - netlify.toml
+  - bin
+  - .gitignore
