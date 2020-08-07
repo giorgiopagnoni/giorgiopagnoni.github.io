@@ -7,7 +7,7 @@ plugins:
 
 sass:
     load_paths:
-        - node_modules
+        - **/*/node_modules
         - _sass
         - assets/css
     style: compressed
