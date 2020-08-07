@@ -15,8 +15,7 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install dependencies
-        run: yarn --frozen-lockfile
-        run: yarn build:css
+        run: yarn --frozen-lockfile && yarn build:css
       - uses: helaili/jekyll-action@2.0.1
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
