@@ -7,8 +7,9 @@ plugins:
 
 sass:
     load_paths:
-        - _sass
         - node_modules
+        - _sass
+        - assets/css
     style: compressed
 
 exclude:
