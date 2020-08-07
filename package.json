@@ -1,0 +1,14 @@
+{
+  "name": "giorgiopagnoni.github.io",
+  "version": "0.0.1",
+  "description": "Giorgio Pagnoni - Personal website",
+  "main": "index.html",
+  "repository": "https://github.com/giorgiopagnoni/giorgiopagnoni.github.io.git",
+  "author": "Giorgio Pagnoni <pag.giorgio@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.6.2"
+  }
+}
