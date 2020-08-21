@@ -1,4 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+a{
+  text-decoration: underline;
+}
+
 @tailwind utilities;

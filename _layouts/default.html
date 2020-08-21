@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "it_IT" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  </head>
-  <body>
-    {{ content}}
-  </body>
+<html lang="{{ site.lang | default: 'it_IT' }}">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>{{ page.title }} - {{ site.title }}</title>
+	<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head>
+<body>
+	{{ content}}
+</body>
+<footer>
+	<div class="text-sm">
+		<b>PER NERD</b>: creato con Jekyll; dopo ogni push su branch master, build automatico e pubblicazione del sito sul branch gh-pages (quello servito) attraverso i workflow delle GitHub Actions.
+		<a href="https://github.com/giorgiopagnoni/giorgiopagnoni.github.io" target="_blank" c>Codice sorgente qui.</a>
+	</div>
+</footer>
 </html>
