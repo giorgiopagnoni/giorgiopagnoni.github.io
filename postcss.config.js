@@ -1,4 +1,8 @@
-const purgecss = require('@fullhuman/postcss-purgecss')
+const purgecss = require('@fullhuman/postcss-purgecss')({
+      content: ['./_layouts/**/*.html', './*.html'],
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    })
+
 const cssnano = require('cssnano')
 
 module.exports = {
@@ -8,9 +12,8 @@ module.exports = {
     cssnano({
       preset: 'default'
     }),
-    purgecss({
-      content: ['./_layouts/**/*.html', './*.html'],
-      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-    })
+    ...process.env.NODE_ENV === 'dev'
+      ? [][purgecss]
+      : []
   ]
 }
