@@ -12,8 +12,8 @@ module.exports = {
     cssnano({
       preset: 'default'
     }),
-    ...process.env.NODE_ENV === 'dev'
-      ? [][purgecss]
+    ...process.env.NODE_ENV !== 'dev'
+      ? [purgecss]
       : []
   ]
 }

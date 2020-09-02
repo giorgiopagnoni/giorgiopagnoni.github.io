@@ -14,6 +14,6 @@
   },
   "scripts": {
     "build:css": "postcss _sass/main.scss -o assets/main.css",
-    "watch": "yarn run build:css --watch"
+    "watch": "NODE_ENV='dev' yarn run build:css --watch"
   }
 }
